@@ -1,0 +1,297 @@
+/* ========================================
+   PAGE-SPECIFIC STYLES
+   ======================================== */
+
+/* ---- Services Page ---- */
+.services-page-header {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
+    text-align: center;
+    background: var(--gradient-dark);
+    position: relative;
+}
+
+.services-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.services-detail-grid.reverse {
+    direction: rtl;
+}
+
+.services-detail-grid.reverse>* {
+    direction: ltr;
+}
+
+.service-detail-img {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    height: 400px;
+}
+
+.service-detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.service-detail-img:hover img {
+    transform: scale(1.05);
+}
+
+.service-detail-content h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+.service-detail-content p {
+    color: var(--color-text-light);
+    line-height: var(--lh-relaxed);
+    margin-bottom: var(--space-md);
+}
+
+.service-price-list {
+    list-style: none;
+}
+
+.service-price-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-glass-border);
+    color: var(--color-text-light);
+    font-size: var(--fs-small);
+}
+
+.service-price-list li span:last-child {
+    color: var(--color-gold);
+    font-weight: var(--fw-semibold);
+}
+
+/* ---- Gallery Page ---- */
+.gallery-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-sm);
+}
+
+.gallery-page-item {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 300px;
+    cursor: pointer;
+}
+
+.gallery-page-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.gallery-page-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-page-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.5);
+    opacity: 0;
+    transition: opacity var(--duration-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-page-item:hover::after {
+    opacity: 1;
+}
+
+/* Filter Tabs */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.gallery-filter-btn {
+    padding: 10px 24px;
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 50px;
+    color: var(--color-text-light);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.gallery-filter-btn.active,
+.gallery-filter-btn:hover {
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border-color: var(--color-gold);
+}
+
+/* ---- Contact Page ---- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.contact-form-wrapper {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    margin-bottom: var(--space-xs);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    font-size: var(--fs-body);
+    transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.contact-info-card {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.contact-info-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: var(--gradient-gold);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+}
+
+.contact-info-text h4 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.contact-info-text p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    line-height: var(--lh-normal);
+}
+
+.contact-hours {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-glass-border);
+}
+
+.contact-hours h4 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+}
+
+.contact-hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.contact-hours-list li span:last-child {
+    color: var(--color-text-light);
+}
+
+/* ---- Responsive Page Styles ---- */
+@media (max-width: 880px) {
+    .services-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-detail-grid.reverse {
+        direction: ltr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-page-grid {
+        grid-template-columns: 1fr;
+    }
+}

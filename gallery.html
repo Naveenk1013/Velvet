@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Velvet Spa & Salon</title>
+    <meta name="description"
+        content="Browse our gallery of stunning beauty transformations — spa treatments, salon looks, bridal makeovers, and nail art at Velvet Spa & Salon.">
+    <link rel="icon" type="image/png" href="images/logo-white.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-white.png" alt="Velvet Spa Logo" class="nav-logo-img">
+                <div class="nav-logo-text">Velvet <span>Spa</span></div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-cta">Book Now</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn--gold" style="margin-top:var(--space-md);text-align:center;">Book Now</a>
+        <div class="mobile-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="services-page-header">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="container">
+            <span class="section-subtitle">Our Portfolio</span>
+            <h1 class="section-title" style="font-size:var(--fs-h1); color:var(--color-white);">Beauty Gallery</h1>
+            <hr class="gold-line">
+            <p class="section-desc">A curated showcase of our finest work — from serene spa moments to breathtaking
+                bridal transformations.</p>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="section" id="gallery-full">
+        <div class="container">
+
+            <!-- Filter Tabs -->
+            <div class="gallery-filters reveal">
+                <button class="gallery-filter-btn active" data-filter="all">All</button>
+                <button class="gallery-filter-btn" data-filter="spa">Spa</button>
+                <button class="gallery-filter-btn" data-filter="salon">Salon</button>
+                <button class="gallery-filter-btn" data-filter="bridal">Bridal</button>
+                <button class="gallery-filter-btn" data-filter="nails">Nails</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-page-grid stagger">
+                <!-- Spa -->
+                <div class="gallery-page-item reveal" data-category="spa"
+                    data-src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80"
+                        alt="Relaxing massage therapy">
+                </div>
+                <!-- Salon -->
+                <div class="gallery-page-item reveal" data-category="salon"
+                    data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80"
+                        alt="Premium salon interior">
+                </div>
+                <!-- Bridal -->
+                <div class="gallery-page-item reveal" data-category="bridal"
+                    data-src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=600&q=80"
+                        alt="Bridal hair styling">
+                </div>
+                <!-- Spa -->
+                <div class="gallery-page-item reveal" data-category="spa"
+                    data-src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=600&q=80"
+                        alt="Spa relaxation area">
+                </div>
+                <!-- Nails -->
+                <div class="gallery-page-item reveal" data-category="nails"
+                    data-src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80"
+                        alt="Luxury nail art">
+                </div>
+                <!-- Salon -->
+                <div class="gallery-page-item reveal" data-category="salon"
+                    data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80"
+                        alt="Hair colouring session">
+                </div>
+                <!-- Bridal -->
+                <div class="gallery-page-item reveal" data-category="bridal"
+                    data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80"
+                        alt="Bridal makeup session">
+                </div>
+                <!-- Spa -->
+                <div class="gallery-page-item reveal" data-category="spa"
+                    data-src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80"
+                        alt="Facial treatment">
+                </div>
+                <!-- Nails -->
+                <div class="gallery-page-item reveal" data-category="nails"
+                    data-src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80"
+                        alt="Nail manicure">
+                </div>
+                <!-- Salon -->
+                <div class="gallery-page-item reveal" data-category="salon"
+                    data-src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80"
+                        alt="Hair styling transformation">
+                </div>
+                <!-- Bridal -->
+                <div class="gallery-page-item reveal" data-category="bridal"
+                    data-src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80"
+                        alt="Bridal beauty preparation">
+                </div>
+                <!-- Spa -->
+                <div class="gallery-page-item reveal" data-category="spa"
+                    data-src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80"
+                        alt="Luxury spa ambiance">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section"
+        style="background-image: url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1920&q=80');">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <span class="section-subtitle">Love What You See?</span>
+                <h2>Become Our Next Transformation</h2>
+                <hr class="gold-line">
+                <p>Book a session and let our experts create a look you'll love. Your beauty story starts here.</p>
+                <a href="contact.html" class="btn btn--gold"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand reveal">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo-footer.png" alt="Velvet Spa, Parlour and Saloon" class="footer-logo-img">
+                    </a>
+                    <p>Experience the art of luxury beauty and wellness. Where every visit is a journey of
+                        transformation and self-care.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="#">About Us</a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h4 class="footer-heading">Services</h4>
+                    <div class="footer-links">
+                        <a href="services.html">Parlour</a>
+                        <a href="services.html">Spa & Wellness</a>
+                        <a href="services.html">Saloon</a>
+                        <a href="services.html">Academy</a>
+                        <a href="services.html">Bridal Packages</a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h4 class="footer-heading">Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Beauty Avenue, Premium District, City 560001</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@velvetspa.com</span>
+                    </div>
+                    <div class="footer-newsletter">
+                        <form class="footer-newsletter-form" onsubmit="return false;">
+                            <input type="email" placeholder="Your email...">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Velvet Spa & Salon. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+        <img src="" alt="Lightbox image" id="lightboxImg">
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

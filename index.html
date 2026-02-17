@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Spa & Salon — Luxury Beauty Experience</title>
+  <meta name="description"
+    content="Experience luxury beauty services at Velvet Spa & Salon. Premium parlour, spa, saloon, and academy services.">
+  <link rel="icon" type="image/png" href="images/logo-white.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-white.png" alt="Velvet Spa Logo" class="nav-logo-img">
+        <div class="nav-logo-text">Velvet <span>Spa</span></div>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Book Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--gold" style="margin-top:var(--space-md);text-align:center;">Book Now</a>
+    <div class="mobile-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"
+      style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-star"></i> &nbsp;Premium Beauty Experience</span>
+      <h1 class="hero-title">Where Beauty Meets <em>Elegance</em></h1>
+      <p class="hero-desc">Indulge in the ultimate luxury spa and salon experience. Our expert therapists deliver
+        transformative treatments that rejuvenate your body, mind, and soul.</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn btn--gold"><i class="fas fa-concierge-bell"></i> Explore Services</a>
+        <a href="contact.html" class="btn btn--outline"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">What We Offer</span>
+        <h2 class="section-title">Our Premium Services</h2>
+        <hr class="gold-line">
+        <p class="section-desc">Discover our curated selection of luxury beauty and wellness services designed to pamper
+          you from head to toe.</p>
+      </div>
+
+      <div class="services-grid stagger">
+        <!-- Parlour -->
+        <div class="service-card reveal">
+          <img class="service-card-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80"
+            alt="Parlour Services">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-number">01</div>
+            <h3 class="service-card-title">Parlour</h3>
+            <p class="service-card-desc">Expert hair styling, bridal makeup, and beauty treatments tailored to your
+              unique style.</p>
+            <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- SPA -->
+        <div class="service-card reveal">
+          <img class="service-card-img" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80"
+            alt="Spa Services">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-number">02</div>
+            <h3 class="service-card-title">Spa</h3>
+            <p class="service-card-desc">Rejuvenating massages, facials, and body treatments in a serene sanctuary of
+              relaxation.</p>
+            <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Saloon -->
+        <div class="service-card reveal">
+          <img class="service-card-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80"
+            alt="Saloon Services">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-number">03</div>
+            <h3 class="service-card-title">Saloon</h3>
+            <p class="service-card-desc">Premium hair cuts, coloring, and grooming services by master stylists.</p>
+            <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Academy -->
+        <div class="service-card reveal">
+          <img class="service-card-img" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80"
+            alt="Academy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-card-number">04</div>
+            <h3 class="service-card-title">Academy</h3>
+            <p class="service-card-desc">Professional beauty courses and certifications taught by industry experts.</p>
+            <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section class="section section--dark" id="stats">
+    <div class="container">
+      <div class="stats-grid stagger">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="12000">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="85">0</div>
+          <div class="stat-label">Expert Stylists</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-label">Beauty Services</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY PREVIEW ========== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Our Work</span>
+        <h2 class="section-title">Beauty Gallery</h2>
+        <hr class="gold-line">
+        <p class="section-desc">A glimpse into the transformations and luxurious experiences we create every day.</p>
+      </div>
+
+      <div class="gallery-grid stagger">
+        <div class="gallery-item reveal"
+          data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Salon interior">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item reveal"
+          data-src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Facial treatment">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item reveal"
+          data-src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=600&q=80" alt="Hair styling">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item reveal"
+          data-src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=600&q=80" alt="Spa relaxation">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item reveal"
+          data-src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Nail art">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-xl);">
+        <a href="gallery.html" class="btn btn--outline reveal"><i class="fas fa-images"></i> View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section section--dark" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">What Clients Say</span>
+        <h2 class="section-title">Client Testimonials</h2>
+        <hr class="gold-line">
+      </div>
+
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonial-card active" data-index="0">
+          <div class="testimonial-quote">&ldquo;</div>
+          <p class="testimonial-text">The most luxurious spa experience I've ever had. The ambiance, the treatments, and
+            the staff are all absolutely world-class. I left feeling completely rejuvenated.</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Johnson">
+            <div>
+              <div class="testimonial-name">Sarah Johnson</div>
+              <div class="testimonial-role">Regular Client</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-index="1">
+          <div class="testimonial-quote">&ldquo;</div>
+          <p class="testimonial-text">Velvet Salon transformed my look completely. The stylists truly understand the art
+            of beauty. I wouldn't trust anyone else with my hair and makeup.</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar"
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Priya Sharma">
+            <div>
+              <div class="testimonial-name">Priya Sharma</div>
+              <div class="testimonial-role">Bridal Client</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-index="2">
+          <div class="testimonial-quote">&ldquo;</div>
+          <p class="testimonial-text">The academy program at Velvet is phenomenal. I completed the certification course
+            and now run my own successful salon. Best investment I ever made.</p>
+          <div class="testimonial-author">
+            <img class="testimonial-avatar"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael Chen">
+            <div>
+              <div class="testimonial-name">Michael Chen</div>
+              <div class="testimonial-role">Academy Graduate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-dots reveal">
+        <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+        <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+        <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section"
+    style="background-image: url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1920&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="cta-content reveal">
+        <span class="section-subtitle">Ready to Transform?</span>
+        <h2>Book Your Luxury Experience Today</h2>
+        <hr class="gold-line">
+        <p>Let our expert team craft a personalized beauty journey just for you. Walk in feeling ordinary, walk out
+          feeling extraordinary.</p>
+        <a href="contact.html" class="btn btn--gold"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand reveal">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo-footer.png" alt="Velvet Spa, Parlour and Saloon" class="footer-logo-img">
+          </a>
+          <p>Experience the art of luxury beauty and wellness. Where every visit is a journey of transformation and
+            self-care.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="reveal">
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">About Us</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="reveal">
+          <h4 class="footer-heading">Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Parlour</a>
+            <a href="services.html">Spa & Wellness</a>
+            <a href="services.html">Saloon</a>
+            <a href="services.html">Academy</a>
+            <a href="services.html">Bridal Packages</a>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="reveal">
+          <h4 class="footer-heading">Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Beauty Avenue, Premium District, City 560001</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>hello@velvetspa.com</span>
+          </div>
+          <div class="footer-newsletter">
+            <form class="footer-newsletter-form" onsubmit="return false;">
+              <input type="email" placeholder="Your email...">
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Velvet Spa & Salon. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image" id="lightboxImg">
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

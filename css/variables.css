@@ -1,0 +1,92 @@
+/* ========================================
+   VELVET SPA — Design Tokens
+   ======================================== */
+:root {
+  /* Colors */
+  --color-dark: #0a0a0a;
+  --color-dark-alt: #111111;
+  --color-dark-card: #1a1a1a;
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4bc8a;
+  --color-gold-dark: #a8893f;
+  --color-rose: #c6005f;
+  --color-rose-light: #e0247a;
+  --color-cream: #faf6f0;
+  --color-cream-dark: #f5f0eb;
+  --color-white: #ffffff;
+  --color-white-soft: rgba(255, 255, 255, 0.85);
+  --color-text-light: #b0b0b0;
+  --color-text-muted: #888888;
+  --color-overlay: rgba(10, 10, 10, 0.7);
+  --color-overlay-dark: rgba(0, 0, 0, 0.85);
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-hover: rgba(255, 255, 255, 0.12);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, #c9a96e 0%, #d4bc8a 50%, #a8893f 100%);
+  --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.8) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(201,169,110,0.15) 0%, rgba(10,10,10,0.9) 100%);
+  --gradient-rose: linear-gradient(135deg, #c6005f 0%, #4d0270 100%);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', Arial, sans-serif;
+  --fs-hero: clamp(2.8rem, 6vw, 5.5rem);
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --lh-tight: 1.2;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+  --ls-wide: 0.15em;
+  --ls-wider: 0.3em;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Sizing */
+  --container-max: 1200px;
+  --container-narrow: 900px;
+  --nav-height: 80px;
+  --border-radius: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 4px 20px rgba(201, 169, 110, 0.25);
+  --shadow-glow: 0 0 30px rgba(201, 169, 110, 0.15);
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.4s;
+  --duration-slow: 0.6s;
+  --duration-slower: 0.8s;
+
+  /* Z-Index */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-toast: 1500;
+}
