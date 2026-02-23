@@ -2,12 +2,47 @@
    PAGE-SPECIFIC STYLES
    ======================================== */
 
-/* ---- Services Page ---- */
+/* ---- Sub-Page Hero Header ---- */
 .services-page-header {
     padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-xl);
     text-align: center;
-    background: var(--gradient-dark);
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.services-page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(218, 166, 218, 0.938) 0%, rgba(94,29,94,0.85) 100%);
+    z-index: 1;
+}
+
+.services-page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.services-page-header .particles {
+    z-index: 2;
+}
+
+.services-page-header .section-title {
+    color: #ffffff !important;
+}
+
+.services-page-header .section-desc {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .services-detail-grid {
@@ -46,7 +81,7 @@
 .service-detail-content h3 {
     font-family: var(--font-heading);
     font-size: var(--fs-h2);
-    color: var(--color-white);
+    color: var(--color-gold-dark);
     margin-bottom: var(--space-sm);
 }
 
@@ -107,7 +142,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 0.5);
+    background: rgba(94, 29, 94, 0.5);
     opacity: 0;
     transition: opacity var(--duration-normal);
     display: flex;
@@ -184,10 +219,10 @@
 .form-group textarea {
     width: 100%;
     padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-dark-card);
     border: 1px solid var(--color-glass-border);
     border-radius: var(--border-radius);
-    color: var(--color-white);
+    color: var(--color-cream);
     font-size: var(--fs-body);
     transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
 }
@@ -196,7 +231,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+    box-shadow: 0 0 0 3px rgba(193, 42, 114, 0.2);
 }
 
 .form-group textarea {
@@ -240,7 +275,7 @@
 
 .contact-info-text h4 {
     font-family: var(--font-heading);
-    color: var(--color-white);
+    color: var(--color-gold-dark);
     margin-bottom: 4px;
 }
 
@@ -258,7 +293,7 @@
 
 .contact-hours h4 {
     font-family: var(--font-heading);
-    color: var(--color-white);
+    color: var(--color-gold-dark);
     margin-bottom: var(--space-sm);
 }
 

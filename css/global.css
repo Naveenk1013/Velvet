@@ -49,11 +49,12 @@ body {
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h1); /* Slightly larger */
   font-weight: var(--fw-bold);
-  color: var(--color-white);
-  line-height: var(--lh-tight);
+  color: var(--color-gold-dark);
+  line-height: 1.1;
   margin-bottom: var(--space-sm);
+  text-shadow: 0 2px 4px rgba(45, 16, 53, 0.05);
 }
 
 .section-desc {
@@ -94,7 +95,7 @@ body {
 
 .btn--gold {
   background: var(--gradient-gold);
-  color: var(--color-dark);
+  color: #ffffff;
   border: none;
 }
 
@@ -111,13 +112,13 @@ body {
 
 .btn--outline:hover {
   background: var(--color-gold);
-  color: var(--color-dark);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
 .btn--white {
   background: var(--color-white);
-  color: var(--color-dark);
+  color: var(--color-gold-dark);
   border: none;
 }
 
