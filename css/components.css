@@ -15,10 +15,11 @@
 }
 
 .navbar.scrolled {
-    background: linear-gradient(135deg, rgba(94, 29, 94, 0.85) 0%, rgba(139, 34, 102, 0.85) 50%, rgba(193, 42, 114, 0.85) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 4px 20px rgba(94, 29, 94, 0.2);
+    background: linear-gradient(135deg, rgba(45, 16, 53, 0.85) 0%, rgba(94, 29, 94, 0.85) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar .container {
@@ -427,13 +428,14 @@
     overflow: hidden;
     height: 420px;
     cursor: pointer;
-    transition: transform var(--duration-normal) var(--ease-smooth),
+    transition: transform var(--duration-fast) ease-out,
         box-shadow var(--duration-normal) var(--ease-smooth);
+    transform-style: preserve-3d;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-glow);
+    box-shadow: var(--shadow-glow-strong);
+    z-index: 10;
 }
 
 .service-card-img {
@@ -562,6 +564,13 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     cursor: pointer;
+    transition: transform var(--duration-fast) ease-out, box-shadow var(--duration-normal);
+    transform-style: preserve-3d;
+}
+
+.gallery-item:hover {
+    box-shadow: var(--shadow-glow);
+    z-index: 10;
 }
 
 .gallery-item:nth-child(1) {
@@ -579,9 +588,7 @@
     transition: transform var(--duration-slow) var(--ease-smooth);
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
+
 
 .gallery-item-overlay {
     position: absolute;
@@ -654,17 +661,15 @@
     position: relative;
     max-width: 700px;
     margin: 0 auto;
-    overflow: hidden;
-    min-height: 280px;
+    display: grid;
 }
 
 .testimonial-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    grid-area: 1 / 1;
     text-align: center;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateY(20px);
     transition: all var(--duration-slow) var(--ease-smooth);
     padding: var(--space-xl) var(--space-lg);
@@ -677,6 +682,8 @@
 
 .testimonial-card.active {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
@@ -795,8 +802,179 @@
     background-attachment: fixed;
 }
 
+/* ========================================
+   WHATSAPP CTA FLOATING
+   ======================================== */
+.whatsapp-cta {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: var(--z-sticky);
+    transition: all var(--duration-normal) var(--ease-smooth);
+    text-decoration: none;
+}
+
+.whatsapp-cta:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: #ffffff;
+}
+
 .cta-section .hero-overlay {
     background: rgba(94, 29, 94, 0.85);
+}
+
+/* ========================================
+   STICKY CONTACT CTA
+   ======================================== */
+.sticky-cta {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
+    background: var(--gradient-gold);
+    color: var(--color-dark);
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    border: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    cursor: pointer;
+    z-index: var(--z-sticky);
+    box-shadow: var(--shadow-gold);
+    transition: all var(--duration-normal) var(--ease-smooth);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    white-space: nowrap;
+}
+
+.sticky-cta:hover {
+    padding: 16px 24px;
+    box-shadow: var(--shadow-glow-strong);
+    background: linear-gradient(135deg, #C12A72 0%, #D94D8F 100%);
+}
+
+.sticky-cta i {
+    transform: rotate(360deg);
+}
+
+/* ========================================
+   CONTACT MODAL
+   ======================================== */
+.contact-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-overlay-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.contact-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.contact-modal-content {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(30px) scale(0.95);
+    transition: transform var(--duration-normal) var(--ease-bounce);
+    box-shadow: var(--shadow-deep);
+}
+
+.contact-modal.active .contact-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color var(--duration-fast);
+}
+
+.contact-modal-close:hover {
+    color: var(--color-gold);
+}
+
+.contact-modal-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.contact-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    margin-bottom: var(--space-xs);
+}
+
+.contact-modal-header p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+}
+
+.contact-modal-form .form-group {
+    margin-bottom: var(--space-md);
+}
+
+.contact-modal-form input,
+.contact-modal-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    transition: border-color var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+.contact-modal-form input:focus,
+.contact-modal-form textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 2px rgba(193, 42, 114, 0.2);
+}
+
+.contact-modal-form textarea {
+    resize: vertical;
 }
 
 .cta-content {
@@ -1119,5 +1297,29 @@
 
     .cta-section {
         background-attachment: scroll;
+    }
+
+    /* Mobile CTA Refactor */
+    .sticky-cta {
+        top: auto;
+        bottom: 30px;
+        left: 30px;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0; /* Hides text, keeps icon */
+    }
+
+    .sticky-cta i {
+        font-size: 1.5rem;
+    }
+
+    .contact-modal-content {
+        padding: var(--space-xl) var(--space-lg);
     }
 }

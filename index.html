@@ -29,6 +29,44 @@
 
 <body>
 
+  <!-- ========== STICKY CONTACT CTA ========== -->
+  <button class="sticky-cta" id="stickyCta" aria-label="Open Contact Form">
+    <i class="fas fa-envelope"></i> Contact Now
+  </button>
+
+  <!-- ========== WHATSAPP CTA ========== -->
+  <a href="https://wa.me/918103459765?text=Hi,%20I%20am%20interested%20in%20your%20services%20and%20want%20to%20know%20more" class="whatsapp-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ========== CONTACT MODAL ========== -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-modal-content">
+      <button class="contact-modal-close" id="contactModalClose" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+      
+      <div class="contact-modal-header">
+        <h3 class="text-gradient">Get in Touch</h3>
+        <p>Drop us a message and we'll get back to you shortly.</p>
+      </div>
+
+      <!-- Formspree Integration -->
+      <form action="https://formspree.io/f/xnjbobpv" method="POST" class="contact-modal-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="How can we help you?" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold" style="width: 100%;">
+          Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="container">
@@ -86,17 +124,15 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-glass-card">
-        <span class="hero-badge"><i class="fas fa-star"></i> &nbsp;Premium Beauty Experience</span>
+     
+        <span class="hero-badge"><i class="fas fa-star"></i> &nbsp;Premium Experience</span>
         <h1 class="hero-title">Where Beauty Meets <em>Elegance</em></h1>
-        <p class="section-subtitle">Indulge in the ultimate luxury spa and salon experience. Our expert therapists
-          deliver
-          transformative treatments that rejuvenate your body, mind, and soul.</p>
+        
         <div class="hero-buttons">
           <a href="services.html" class="btn btn--gold"><i class="fas fa-concierge-bell"></i> Explore Services</a>
           <a href="contact.html" class="btn btn--outline"><i class="fas fa-calendar-check"></i> Book Appointment</a>
         </div>
-      </div>
+      
     </div>
 
     <div class="hero-scroll">
@@ -110,7 +146,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-subtitle">What We Offer</span>
-        <h2 class="section-title">Our Premium Services</h2>
+        <h2 class="section-title text-gradient">Our Premium Services</h2>
         <hr class="gold-line">
         <p class="section-desc">Discover our curated selection of luxury beauty and wellness services designed to pamper
           you from head to toe.</p>
@@ -211,7 +247,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-subtitle">Our Work</span>
-        <h2 class="section-title">Beauty Gallery</h2>
+        <h2 class="section-title text-gradient">Beauty Gallery</h2>
         <hr class="gold-line">
         <p class="section-desc">A glimpse into the transformations and luxurious experiences we create every day.</p>
       </div>
@@ -255,7 +291,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-subtitle">What Clients Say</span>
-        <h2 class="section-title">Client Testimonials</h2>
+        <h2 class="section-title text-gradient">Client Testimonials</h2>
         <hr class="gold-line">
       </div>
 
@@ -416,6 +452,9 @@
     <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
     <img src="" alt="Lightbox image" id="lightboxImg">
   </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
 
   <!-- Scripts -->
   <script src="js/nav.js"></script>

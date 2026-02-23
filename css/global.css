@@ -101,7 +101,7 @@ body {
 
 .btn--gold:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-glow-strong);
 }
 
 .btn--outline {
@@ -249,5 +249,52 @@ body {
 
   .container {
     padding: 0 var(--space-sm);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--space-xl) 0;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-cursor);
+  border-radius: var(--border-radius-full);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-fast), height var(--duration-fast), background-color var(--duration-fast);
+  box-shadow: var(--shadow-glow-strong);
+}
+
+.custom-cursor.hovering {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(193, 42, 114, 0.15);
+  box-shadow: 0 0 50px rgba(193, 42, 114, 0.3);
+  mix-blend-mode: screen;
+}
+
+/* Text Gradient Utility */
+.text-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for unsupported browsers */
+  display: inline-block;
+}
+
+/* Touch Device Adjustments */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
   }
 }

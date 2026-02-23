@@ -47,4 +47,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Current year in footer ----
     const yearSpan = document.getElementById('currentYear');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+    // ---- Custom Cursor Tracking ----
+    const cursor = document.getElementById('customCursor');
+    if (cursor && window.matchMedia("(pointer: fine)").matches) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const hoverElements = document.querySelectorAll('a, button, .service-card, .gallery-item');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+    }
+
+    // ---- Sticky Contact Modal Logic ----
+    const stickyCta = document.getElementById('stickyCta');
+    const contactModal = document.getElementById('contactModal');
+    const contactModalClose = document.getElementById('contactModalClose');
+
+    if (stickyCta && contactModal && contactModalClose) {
+        // Open Modal
+        stickyCta.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close Modal
+        const closeModal = () => {
+            contactModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        contactModalClose.addEventListener('click', closeModal);
+
+        // Click outside to close
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeModal();
+            }
+        });
+    }
 });

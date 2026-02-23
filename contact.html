@@ -29,6 +29,41 @@
 
 <body>
 
+    <!-- ========== STICKY CONTACT CTA ========== -->
+    <button class="sticky-cta" id="stickyCta" aria-label="Open Contact Form">
+        <i class="fas fa-envelope"></i> Contact Now
+    </button>
+
+    <!-- ========== WHATSAPP CTA ========== -->
+    <a href="https://wa.me/918103459765?text=Hi,%20I%20am%20interested%20in%20your%20services%20and%20want%20to%20know%20more" class="whatsapp-cta" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== CONTACT MODAL ========== -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="contactModalClose" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+            <div class="contact-modal-header">
+                <h3 class="text-gradient">Get in Touch</h3>
+                <p>Drop us a message and we'll get back to you shortly.</p>
+            </div>
+            <form action="https://formspree.io/f/xnjbobpv" method="POST" class="contact-modal-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="How can we help you?" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--gold" style="width: 100%;">
+                    Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar scrolled" id="navbar">
         <div class="container">
