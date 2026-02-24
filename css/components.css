@@ -165,11 +165,15 @@
     background: var(--color-overlay-dark);
     z-index: var(--z-overlay);
     opacity: 0;
-    transition: opacity var(--duration-normal) var(--ease-smooth);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all var(--duration-normal) var(--ease-smooth);
 }
 
 .mobile-overlay.active {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .mobile-menu {
