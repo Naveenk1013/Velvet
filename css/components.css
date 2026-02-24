@@ -1274,6 +1274,19 @@
 
     .stats-grid {
         grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+    }
+
+    .stat-item {
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .stat-label {
+        font-size: var(--fs-xs);
     }
 
     .gallery-grid {
