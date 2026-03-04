@@ -1123,9 +1123,10 @@
 
 .footer-social a:hover {
     background: var(--color-gold);
-    color: var(--color-dark);
+    color: var(--color-white);
     border-color: var(--color-gold);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
 }
 
 .footer-heading {
@@ -1282,8 +1283,10 @@
 }
 
 /* ========================================
-   RESPONSIVE — Components
+   UNIFIED RESPONSIVE SYSTEM
    ======================================== */
+
+/* Laptops / Large Tablets (1024px) */
 @media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1299,22 +1302,45 @@
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-lg);
+        gap: var(--space-xl) var(--space-md);
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
 
-@media (max-width: 880px) {
+/* Tablets / Large Mobiles (768px) */
+@media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none !important;
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
     }
 
     .mobile-overlay,
     .mobile-menu {
         display: block;
+    }
+
+    .hero-glass-card {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3.5rem);
     }
 
     .gallery-grid {
@@ -1329,42 +1355,6 @@
     .gallery-item:nth-child(4) {
         grid-column: span 1;
     }
-}
-
-@media (max-width: 640px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card {
-        height: 300px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-sm);
-    }
-
-    .stat-item {
-        padding: var(--space-md) var(--space-sm);
-    }
-
-    .stat-number {
-        font-size: 2.2rem;
-    }
-
-    .stat-label {
-        font-size: var(--fs-xs);
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 250px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
 
     .footer-bottom {
         flex-direction: column;
@@ -1372,19 +1362,6 @@
         text-align: center;
     }
 
-    .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    .hero-desc {
-        font-size: 1rem;
-    }
-
-    .cta-section {
-        background-attachment: scroll;
-    }
-
-    /* Mobile CTA Refactor */
     .sticky-cta {
         top: auto;
         bottom: 30px;
@@ -1397,14 +1374,59 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 0; /* Hides text, keeps icon */
+        font-size: 0;
     }
 
     .sticky-cta i {
         font-size: 1.5rem;
     }
+}
+
+/* Smartphones (480px) */
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        height: 320px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .cta-section {
+        background-attachment: scroll;
+    }
 
     .contact-modal-content {
         padding: var(--space-xl) var(--space-lg);
+    }
+    
+    .nav-logo-text {
+        font-size: 1.2rem;
     }
 }
