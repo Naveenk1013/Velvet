@@ -58,8 +58,8 @@ project01/
   - Back-to-top button
 - **Services page (`services.html`)** — all sections:
   - Alternating image/text layout for Parlour, Spa, Saloon, Academy
-  - Price lists for each service category
-  - 3-tier Bridal Packages (Silver/Gold/Platinum) with pricing cards
+  - Comprehensive service lists for each category
+  - 3-tier Bridal Packages (Silver/Gold/Platinum)
   - CTA and full footer
 - **Gallery page (`gallery.html`)** — all sections:
   - 5-tab category filter (All, Spa, Salon, Bridal, Nails)
@@ -154,11 +154,11 @@ Once Node.js is installed, the plan is to:
 #### Services Page (`services.html`)
 - **Page Header:** Dark background with floating particles
 - **Service Sections:** Alternating image/text layout for 4 categories:
-  - **Parlour:** Bridal makeup, party makeup, facials, hair treatments (₹500-₹12,000)
-  - **Spa & Wellness:** Swedish massage, aromatherapy, hot stone, body treatments (₹3,500-₹10,000)
-  - **Saloon:** Haircuts, coloring, keratin, grooming (₹800-₹8,000)
-  - **Academy:** Professional courses and certifications (₹5,000-₹85,000)
-- **Bridal Packages:** 3-tier pricing cards (Silver ₹25K, Gold ₹50K, Platinum ₹85K)
+  - **Parlour:** Bridal makeup, party makeup, facials, hair treatments
+  - **Spa & Wellness:** Swedish massage, aromatherapy, hot stone, body treatments
+  - **Saloon:** Haircuts, coloring, keratin, grooming
+  - **Academy:** Professional courses and certifications
+- **Bridal Packages:** 3-tier packages (Silver, Gold, Platinum) with detailed service inclusions
 - **CTA Section:** Parallax booking call-to-action
 - **Footer:** Full footer with all links
 
@@ -177,9 +177,10 @@ Once Node.js is installed, the plan is to:
   - Name, email, phone, service interest, message
   - Success animation on submission
 - **Info Sidebar:** Contact details card with:
-  - Address, phone numbers, email addresses
-  - WhatsApp quick contact
-  - Business hours (Mon-Fri 9AM-9PM, Sat 9AM-8PM, Sun 10AM-6PM)
+  - Address: Harimart, Tengra Mod, Ram Nagar Varanasi
+  - Phone: +91 81034 59765, +91 73079 52390
+  - Email: Velvetacademy1@gmail.com
+  - WhatsApp: +91 81034 59765
 - **Social Follow Card:** Links to all social platforms
 - **Google Maps:** Embedded location map with custom styling
 - **Footer:** Complete footer
@@ -252,7 +253,7 @@ Once Node.js is installed, the plan is to:
 All planned features have been implemented:
 - ✅ Full design system with luxury aesthetic
 - ✅ Homepage with all interactive sections
-- ✅ Services page with pricing
+- ✅ Services page with comprehensive listings
 - ✅ Gallery page with filtering
 - ✅ Contact page with form and map
 - ✅ Custom branding (logos, favicon)

@@ -77,6 +77,7 @@
 
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
+        <a href="#about">About</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -93,6 +94,7 @@
   <div class="mobile-overlay" id="mobileOverlay"></div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
+    <a href="#about">About</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
@@ -140,6 +142,65 @@
       <i class="fas fa-chevron-down"></i>
     </div>
   </section>
+  
+  <!-- ========== CLIENT CAROUSEL ========== -->
+  <section class="client-carousel-section" id="clients">
+    <div class="carousel-track-viewport">
+      <div class="carousel-track">
+        <!-- Group 1 -->
+        <div class="carousel-item"><img src="images/Clients/01.jpg" alt="Client 1"></div>
+        <div class="carousel-item"><img src="images/Clients/05.jpg" alt="Client 2"></div>
+        <div class="carousel-item"><img src="images/Clients/06.jpg" alt="Client 3"></div>
+        <div class="carousel-item"><img src="images/Clients/07.jpg" alt="Client 4"></div>
+        <div class="carousel-item"><img src="images/Clients/08.jpg" alt="Client 5"></div>
+        <div class="carousel-item"><img src="images/Clients/10.jpg" alt="Client 6"></div>
+        <div class="carousel-item"><img src="images/Clients/11.jpg" alt="Client 7"></div>
+        <!-- Cloned Group for Seamless Loop -->
+        <div class="carousel-item"><img src="images/Clients/01.jpg" alt="Client 1"></div>
+        <div class="carousel-item"><img src="images/Clients/05.jpg" alt="Client 2"></div>
+        <div class="carousel-item"><img src="images/Clients/06.jpg" alt="Client 3"></div>
+        <div class="carousel-item"><img src="images/Clients/07.jpg" alt="Client 4"></div>
+        <div class="carousel-item"><img src="images/Clients/08.jpg" alt="Client 5"></div>
+        <div class="carousel-item"><img src="images/Clients/10.jpg" alt="Client 6"></div>
+        <div class="carousel-item"><img src="images/Clients/11.jpg" alt="Client 7"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT US ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-2xl); align-items: center;">
+        <div class="about-image reveal">
+          <div style="position: relative; padding-bottom: 125%; overflow: hidden; border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+            <img src="images/Clients/founder.jpg" alt="Kavita Maurya" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; bottom: var(--space-lg); left: var(--space-lg); right: var(--space-lg); background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); padding: var(--space-md); border-radius: var(--border-radius-sm); border-left: 4px solid var(--color-gold);">
+              <h4 style="color: var(--color-white); margin-bottom: 4px;">Kavita Maurya</h4>
+              <p style="color: var(--color-gold); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-wide);">Founder & CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="section-subtitle">Since 2021</span>
+          <h2 class="section-title text-gradient">About Velvet</h2>
+          <hr class="gold-line" style="margin-left: 0;">
+          <p class="section-desc" style="margin-left: 0; margin-bottom: var(--space-lg); font-size: 1.1rem; line-height: 1.8;">
+            Hi, I am <strong>Kavita Maurya</strong>, Founder of Velvet Academy Spa, Parlor, and Saloon. I welcome you to Velvet, your ultimate destination for beauty, relaxation, and self-care.
+          </p>
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: var(--space-xl); border-radius: var(--border-radius); position: relative;">
+            <i class="fas fa-quote-left" style="position: absolute; top: -15px; left: 20px; font-size: 2rem; color: var(--color-gold); opacity: 0.3;"></i>
+            <p style="font-style: italic; color: var(--color-text-light); line-height: 1.8;">
+              "We are more than just a salon and spa – we are a haven where you can escape the hustle of daily life and immerse yourself in luxury. Our mission is to provide you with an experience that rejuvenates your spirit as much as your look."
+            </p>
+          </div>
+          <div style="margin-top: var(--space-xl); display: flex; gap: var(--space-md);">
+            <a href="services.html" class="btn btn--gold">Explore Services</a>
+            <a href="contact.html" class="btn btn--outline">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== SERVICES ========== -->
   <section class="section" id="services">
@@ -163,8 +224,7 @@
               <div class="service-card-number">01</div>
               <h3 class="service-card-title">Parlour</h3>
             </div>
-            <p class="service-card-desc">Expert hair styling, bridal makeup, and beauty treatments tailored to your
-              unique style.</p>
+            <p class="service-card-desc">Step into elegance with expert facials, bridal makeup, and professional skincare treatments.</p>
             <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -179,8 +239,7 @@
               <div class="service-card-number">02</div>
               <h3 class="service-card-title">Spa</h3>
             </div>
-            <p class="service-card-desc">Rejuvenating massages, facials, and body treatments in a serene sanctuary of
-              relaxation.</p>
+            <p class="service-card-desc">Relax and rejuvenate with therapeutic massages, steam therapy, and aromatherapy in our serene sanctuary.</p>
             <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -195,7 +254,7 @@
               <div class="service-card-number">03</div>
               <h3 class="service-card-title">Salon</h3>
             </div>
-            <p class="service-card-desc">Premium hair cuts, coloring, and grooming services by master stylists.</p>
+            <p class="service-card-desc">Unleash your style with precision cuts, vibrant coloring, and expert grooming for men and women.</p>
             <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -210,7 +269,7 @@
               <div class="service-card-number">04</div>
               <h3 class="service-card-title">Academy</h3>
             </div>
-            <p class="service-card-desc">Professional beauty courses and certifications taught by industry experts.</p>
+            <p class="service-card-desc">Unlock your potential with accredited beauty courses, hands-on training, and expert mentorship.</p>
             <a href="services.html" class="service-card-arrow"><i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
@@ -223,19 +282,19 @@
     <div class="container">
       <div class="stats-grid stagger">
         <div class="stat-item reveal">
-          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-number" data-target="4+">0</div>
           <div class="stat-label">Years Experience</div>
         </div>
         <div class="stat-item reveal">
-          <div class="stat-number" data-target="12000">0</div>
+          <div class="stat-number" data-target="200+">0</div>
           <div class="stat-label">Happy Clients</div>
         </div>
         <div class="stat-item reveal">
-          <div class="stat-number" data-target="85">0</div>
+          <div class="stat-number" data-target="5+">0</div>
           <div class="stat-label">Expert Stylists</div>
         </div>
         <div class="stat-item reveal">
-          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-number" data-target="60+">0</div>
           <div class="stat-label">Beauty Services</div>
         </div>
       </div>
@@ -254,28 +313,28 @@
 
       <div class="gallery-grid stagger">
         <div class="gallery-item reveal"
-          data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Salon interior">
+          data-src="images/Clients/01.jpg">
+          <img src="images/Clients/01.jpg" alt="Salon interior">
           <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
         </div>
         <div class="gallery-item reveal"
-          data-src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Facial treatment">
+          data-src="images/Clients/05.jpg">
+          <img src="images/Clients/05.jpg" alt="Facial treatment">
           <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
         </div>
         <div class="gallery-item reveal"
-          data-src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1519699047748-de8e44f2b480?w=600&q=80" alt="Hair styling">
+          data-src="images/Clients/06.jpg">
+          <img src="images/Clients/06.jpg" alt="Hair styling">
           <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
         </div>
         <div class="gallery-item reveal"
-          data-src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=600&q=80" alt="Spa relaxation">
+          data-src="images/Clients/07.jpg">
+          <img src="images/Clients/07.jpg" alt="Spa relaxation">
           <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
         </div>
         <div class="gallery-item reveal"
-          data-src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Nail art">
+          data-src="images/Clients/10.jpg">
+          <img src="images/Clients/10.jpg" alt="Bridal makeup">
           <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
         </div>
       </div>
@@ -302,9 +361,9 @@
             the staff are all absolutely world-class. I left feeling completely rejuvenated.</p>
           <div class="testimonial-author">
             <img class="testimonial-avatar"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Johnson">
+              src="images/Clients/01.jpg" alt="Neha Patel">
             <div>
-              <div class="testimonial-name">Sarah Johnson</div>
+              <div class="testimonial-name">Neha Patel</div>
               <div class="testimonial-role">Regular Client</div>
             </div>
           </div>
@@ -316,10 +375,10 @@
             of beauty. I wouldn't trust anyone else with my hair and makeup.</p>
           <div class="testimonial-author">
             <img class="testimonial-avatar"
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Priya Sharma">
+              src="images/Clients/05.jpg" alt="Akanksha Yadav">
             <div>
-              <div class="testimonial-name">Priya Sharma</div>
-              <div class="testimonial-role">Bridal Client</div>
+              <div class="testimonial-name">Akanksha Yadav</div>
+              <div class="testimonial-role">Teacher</div>
             </div>
           </div>
         </div>
@@ -330,10 +389,10 @@
             and now run my own successful salon. Best investment I ever made.</p>
           <div class="testimonial-author">
             <img class="testimonial-avatar"
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael Chen">
+              src="images/Clients/06.jpg" alt="Reema Maurya">
             <div>
-              <div class="testimonial-name">Michael Chen</div>
-              <div class="testimonial-role">Academy Graduate</div>
+              <div class="testimonial-name">Reema Maurya</div>
+              <div class="testimonial-role">Home Maker</div>
             </div>
           </div>
         </div>
@@ -391,7 +450,7 @@
             <a href="services.html">Services</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
-            <a href="#">About Us</a>
+            <a href="#about">About Us</a>
           </div>
         </div>
 
@@ -412,15 +471,15 @@
           <h4 class="footer-heading">Get In Touch</h4>
           <div class="footer-contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>123 Beauty Avenue, Premium District, City 560001</span>
+            <span>Harimart, Tengra Mod, Ram Nagar Varanasi, Near Swastik Amaravati Appartment - 221008</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-phone"></i>
-            <span>+91 98765 43210</span>
+            <span>+91 81034 59765, +91 73079 52390</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-envelope"></i>
-            <span>hello@velvetspa.com</span>
+            <span>Velvetacademy1@gmail.com</span>
           </div>
           <div class="footer-newsletter">
             <form class="footer-newsletter-form" onsubmit="return false;">

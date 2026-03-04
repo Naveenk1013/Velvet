@@ -418,6 +418,74 @@
 }
 
 /* ========================================
+   CLIENT CAROUSEL (INFINITE MARQUEE)
+   ======================================== */
+.client-carousel-section {
+    background: var(--color-dark);
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid var(--color-glass-border);
+    overflow: hidden;
+}
+
+.carousel-track-viewport {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 100px;
+    margin: 0 var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity var(--duration-normal) var(--ease-smooth), transform var(--duration-normal);
+}
+
+.carousel-item:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(150%);
+    transition: filter var(--duration-normal);
+}
+
+.carousel-item:hover img {
+    filter: grayscale(0%) brightness(100%);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 140px;
+        margin: 0 var(--space-md);
+    }
+}
+
+/* ========================================
    SERVICE CARDS
    ======================================== */
 .services-grid {
@@ -843,7 +911,7 @@
    ======================================== */
 .sticky-cta {
     position: fixed;
-    top: 50%;
+    top: 65%;
     left: 0;
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left top;

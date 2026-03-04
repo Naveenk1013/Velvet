@@ -91,6 +91,91 @@
     margin-bottom: var(--space-md);
 }
 
+.service-intro {
+    font-size: var(--fs-small);
+    color: var(--color-gold) !important;
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    margin-bottom: var(--space-sm) !important;
+}
+
+.service-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.feature-item {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: var(--border-radius);
+    transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold);
+}
+
+.feature-item i {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.feature-item h4 {
+    font-size: var(--fs-small);
+    color: var(--color-cream);
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.sub-heading {
+    font-family: var(--font-heading);
+    font-size: var(--fs-body);
+    color: var(--color-gold-dark);
+    margin: var(--space-lg) 0 var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+}
+
+.why-choose-list {
+    list-style: none;
+    margin-bottom: var(--space-lg);
+}
+
+.why-choose-list li {
+    font-size: var(--fs-small);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.why-choose-list li i {
+    color: var(--color-gold);
+    font-size: 0.9rem;
+}
+
+.booking-invite {
+    font-style: italic;
+    color: var(--color-gold) !important;
+    margin-top: var(--space-md);
+    font-size: var(--fs-small);
+}
+
 .service-price-list {
     list-style: none;
 }
@@ -263,14 +348,46 @@
 .contact-info-icon {
     width: 50px;
     height: 50px;
-    min-width: 50px;
-    background: var(--gradient-gold);
+    background: var(--color-gold);
+    color: var(--color-white);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-dark);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Contact Sidebar Social Icons Fix */
+.contact-sidebar-social {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+}
+
+.contact-sidebar-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-gold);
+    border-radius: var(--border-radius);
+    color: var(--color-gold);
+    transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.contact-sidebar-social a:hover {
+    background: var(--color-gold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-3px);
+}
+/* Business Hours Styles */
+.contact-hours {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-glass-border);
 }
 
 .contact-info-text h4 {
@@ -318,6 +435,10 @@
 
     .services-detail-grid.reverse {
         direction: ltr;
+    }
+
+    .service-features-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-grid {
