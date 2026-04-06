@@ -27,22 +27,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Contact form handling ----
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    // ---- Formspree submission handler (AJAX) ----
+    const forms = document.querySelectorAll('form[action^="https://formspree.io"]');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
+            
+            const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            btn.style.background = '#27ae60';
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                contactForm.reset();
-            }, 3000);
+            const data = new FormData(form);
+            
+            // Loading state
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    btn.style.background = '#27ae60';
+                    form.reset();
+                    
+                    // Specific logic for Modal: Close after 3 seconds
+                    if (form.classList.contains('contact-modal-form')) {
+                        setTimeout(() => {
+                            const modal = document.getElementById('contactModal');
+                            if (modal) {
+                                modal.classList.remove('active');
+                                document.body.style.overflow = '';
+                            }
+                        }, 2500);
+                    }
+                } else {
+                    const errorMsg = await response.json();
+                    throw new Error(errorMsg.error || 'Oops! There was a problem submitting your form');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error Occurred';
+                btn.style.background = '#e74c3c';
+            } finally {
+                // Reset button after specified time
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                }, 3000);
+            }
         });
-    }
+    });
+
 
     // ---- Current year in footer ----
     const yearSpan = document.getElementById('currentYear');
